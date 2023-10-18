@@ -84,7 +84,7 @@ app.post("/forgot-password", async (req, res) => {
         SECRET,
         { expiresIn: "5m" }
       );
-      const link = `https://passwordreset-gfgs.onrender.com/reset-password/${userExist.id}/${token}`;
+      const link = `https://passwordresettask.onrender.com/reset-password/${userExist.id}/${token}`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
