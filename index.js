@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const crypto = require('crypto');
+
 const cors = require("cors");
 const bcrypt = require("bcryptjs");
 require("./Models/UserModel");
@@ -7,7 +9,7 @@ const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-const JWT_SECRET = "asddbukygug5258556284dwqfnuwq390e0-???>''/";
+const JWT_SECRET = crypto.randomBytes(32).toString('hex');;
 
 const app = express();
 app.use(express.json());
