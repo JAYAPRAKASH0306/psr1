@@ -4,7 +4,7 @@ const crypto = require('crypto');
 
 const cors = require("cors");
 const bcrypt = require("bcryptjs");
-require("./Models/UserModel");
+require("./models/userModel");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
